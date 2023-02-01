@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8539B5AE298AD2E7006E3ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539B5AD298AD2E7006E3ABF /* AppDelegate.swift */; };
-		8539B5B0298AD2E7006E3ABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539B5AF298AD2E7006E3ABF /* ViewController.swift */; };
 		8539B5B2298AD2E8006E3ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8539B5B1298AD2E8006E3ABF /* Assets.xcassets */; };
-		8539B5B5298AD2E8006E3ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8539B5B3298AD2E8006E3ABF /* Main.storyboard */; };
+		8539B5BD298ADB09006E3ABF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539B5BC298ADB09006E3ABF /* main.swift */; };
+		8539B5C0298ADC14006E3ABF /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8539B5BF298ADC14006E3ABF /* BluetoothHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8539B5AA298AD2E7006E3ABF /* QC45Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QC45Control.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8539B5AD298AD2E7006E3ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8539B5AF298AD2E7006E3ABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8539B5B1298AD2E8006E3ABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8539B5B4298AD2E8006E3ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8539B5B6298AD2E8006E3ABF /* QC45Control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QC45Control.entitlements; sourceTree = "<group>"; };
+		8539B5BC298ADB09006E3ABF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8539B5BE298ADB6A006E3ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8539B5BF298ADC14006E3ABF /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		8539B5A1298AD2E7006E3ABF = {
 			isa = PBXGroup;
 			children = (
+				8539B5BC298ADB09006E3ABF /* main.swift */,
 				8539B5AC298AD2E7006E3ABF /* QC45Control */,
 				8539B5AB298AD2E7006E3ABF /* Products */,
 			);
@@ -52,11 +54,11 @@
 		8539B5AC298AD2E7006E3ABF /* QC45Control */ = {
 			isa = PBXGroup;
 			children = (
+				8539B5BE298ADB6A006E3ABF /* Info.plist */,
 				8539B5AD298AD2E7006E3ABF /* AppDelegate.swift */,
-				8539B5AF298AD2E7006E3ABF /* ViewController.swift */,
 				8539B5B1298AD2E8006E3ABF /* Assets.xcassets */,
-				8539B5B3298AD2E8006E3ABF /* Main.storyboard */,
 				8539B5B6298AD2E8006E3ABF /* QC45Control.entitlements */,
+				8539B5BF298ADC14006E3ABF /* BluetoothHelper.swift */,
 			);
 			path = QC45Control;
 			sourceTree = "<group>";
@@ -120,7 +122,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8539B5B2298AD2E8006E3ABF /* Assets.xcassets in Resources */,
-				8539B5B5298AD2E8006E3ABF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,23 +132,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8539B5B0298AD2E7006E3ABF /* ViewController.swift in Sources */,
+				8539B5BD298ADB09006E3ABF /* main.swift in Sources */,
 				8539B5AE298AD2E7006E3ABF /* AppDelegate.swift in Sources */,
+				8539B5C0298ADC14006E3ABF /* BluetoothHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8539B5B3298AD2E8006E3ABF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8539B5B4298AD2E8006E3ABF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8539B5B7298AD2E8006E3ABF /* Debug */ = {
@@ -277,8 +268,8 @@
 				DEVELOPMENT_TEAM = 6N5F2VGD4A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QC45Control/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,8 +295,8 @@
 				DEVELOPMENT_TEAM = 6N5F2VGD4A;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QC45Control/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
